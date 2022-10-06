@@ -1,0 +1,51 @@
+.body-partidos {
+    background: map-get($map: $colores, $key:gradiente-fondo );
+}
+#caption{
+    color: map-get($map: $colores, $key: color-usos );
+    font-size: 25px;
+    font-family: $letra-subtitulos;
+    font-weight: bold;
+}
+#titulos-tabla{
+    font-size: 18px;
+    font-family: $letra-subtitulos;
+    
+}
+#tablas-partidos{
+    font-size: 14px;
+    padding: 20px;
+}
+.bordes-fotos{
+    border: 3px solid map-get($map: $colores, $key: color-usos );
+    margin-top: 45px;
+    margin-bottom: 45px;
+    box-shadow: 0px 0px 34px 6px rgba(39,68,214,1);
+    width: 550px;
+    height: 350px;
+}
+#tablas-ligas{
+    text-align: center;
+}
+.puntos{
+    background-color: aqua;
+}
+
+@media screen and (max-width: 1210px) {
+    .bordes-fotos{
+        width: 460px;
+        height: 300px;
+    }
+}
+@media screen and (max-width: 1050px) {
+    .bordes-fotos{
+        width: 420px;
+        height: 275px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .bordes-fotos{
+        width: 300px;
+        height: 210px;
+    }
+}

@@ -1,0 +1,132 @@
+.fondo-general{
+    background: url(../assets/img/footer.webp) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+footer {
+    @extend .fondo-general;
+    height: 40vh;
+    margin-top: 40px;
+}
+
+header {
+    height: 30vh;
+    background: url(../assets/img/fondo3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    nav {
+        margin-left: 20px;
+
+        ul {
+            li {
+                padding: 15px;
+                border-radius: 3px;
+                margin: 20px;
+                list-style-type: none;
+
+                a {
+                    font-size: 28px !important;
+                    color: white !important;
+                    text-decoration: none;
+                    font-family: helvetica;
+                    padding: 5px;
+
+                }
+            }
+        }
+    }
+}
+
+h1 {
+    color: map-get($map: $colores, $key: color-usos);
+    font-size: 60px;
+    text-align: center;
+    font-family: universal;
+
+}
+
+p {
+    text-align: center;
+}
+
+#logo-header {
+    text-align: center;
+    margin: 20px;
+}
+
+#logo {
+    width: 150px;
+    height: 150px;
+}
+
+#footer {
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.links-ayuda {
+    text-decoration: none;
+    color: antiquewhite;
+
+}
+
+.social-media {
+    text-align: center;
+    color: antiquewhite;
+}
+
+h2 {
+    @extend h1;
+    font-size: 40px;
+    font-family: RachelBrown;
+
+}
+
+h4 {
+    color: dodgerblue;
+
+}
+
+// MEDIA QUERIES
+
+@media screen and (max-width: 990px) {
+    header {
+        height: 100vh;
+        nav {
+            ul {
+                li {
+                    a {
+                        color: black !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+
+    }
+
+    #logo {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    #logo {
+        width: 100px;
+        height: 100px;
+    }
+
+}
