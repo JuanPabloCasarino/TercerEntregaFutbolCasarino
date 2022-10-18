@@ -1,20 +1,24 @@
-.body-partidos {
-    background: map-get($map: $colores, $key:gradiente-fondo );
-}
+
 #caption{
     color: map-get($map: $colores, $key: color-usos );
     font-size: 25px;
     font-family: $letra-subtitulos;
     font-weight: bold;
 }
-#titulos-tabla{
-    font-size: 18px;
-    font-family: $letra-subtitulos;
-    
+.fondo-tablas{
+    background: url(../assets/img/blanco-horizontal.jpg) no-repeat center center fixed !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    padding: 10px;
 }
-#tablas-partidos{
-    font-size: 14px;
-    padding: 20px;
+.fondo-videos{
+    background: url(../assets/img/fondo-blanco.jpg) no-repeat center center fixed !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
 }
 .bordes-fotos{
     border: 3px solid map-get($map: $colores, $key: color-usos );
@@ -30,11 +34,18 @@
 .puntos{
     background-color: aqua;
 }
-
+.videos-partidos{
+    width: 500px;
+    height: 260px;
+}
 @media screen and (max-width: 1210px) {
     .bordes-fotos{
         width: 460px;
         height: 300px;
+    }
+    .videos-partidos{
+        width: 460px;
+        height: 255px;
     }
 }
 @media screen and (max-width: 1050px) {
@@ -47,5 +58,9 @@
     .bordes-fotos{
         width: 300px;
         height: 210px;
+    }
+    .videos-partidos{
+        width: 340px;
+        height: 200px;
     }
 }

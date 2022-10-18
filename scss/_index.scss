@@ -1,39 +1,7 @@
-.body-index {
-    width: 100%;
-    background: map-get($map: $colores, $key:gradiente-fondo);
-}
 
-#main-index {
-    padding: 30px;
-
-}
 
 #row-1 {
     height: 100%;
-}
-
-
-.bordes {
-    text-align: center;
-    border-radius: 10px;
-    padding: 10px;
-    margin-top: 10px;
-    @extend .fondo-general;
-    margin: 10px;
-}
-
-#tabla {
-    text-align: center;
-    margin-top: 30px;
-    padding: 5px;
-    border: 4px solid map-get($map: $colores, $key: color-fondo);
-    border-radius: 10px;
-    color: map-get($map: $colores, $key: letras-claro);
-    background: url(../assets/img/footer.webp) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 }
 
 .medidas {
@@ -45,7 +13,10 @@
     text-align: start;
     font-size: 30px;
     color: black;
-    margin-left: 10px;
+}
+
+#intro {
+    padding: 25px;
 }
 
 #info-copa {
@@ -57,6 +28,17 @@
     border: 4px solid map-get($map: $colores, $key: color-fondo);
     border-radius: 20px;
     margin-bottom: 20px;
+
+}
+
+.fade {
+    opacity: 0.8;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 1s;
+}
+
+.fade:hover {
+    opacity: 1;
 }
 
 #cartel-medio {
@@ -65,14 +47,14 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border-radius: 20px;
     padding: 10px;
     font-family: helvetica;
-    margin-top: 20px;
+    font-size: 28px;
+    margin-top: 40px;
 }
 
 #estadisticas {
-    background: url(../assets/img/blanco-horizontal.jpg) no-repeat center center fixed !important;
+    background: linear-gradient(top, rgba(255,255,255,0), rgb(19, 156, 197,0.8)), url(../assets/img/blanco-horizontal.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -84,7 +66,8 @@
         color: map-get($map: $colores, $key: color-usos)
     }
 }
-#goleadores{
+
+#goleadores {
     border: solid 1px black;
     border-radius: 30px;
     margin-bottom: 20px;
@@ -94,10 +77,12 @@
     font-size: 60px;
     font-family: helvetica;
 }
-.resultados-finales{
+
+.resultados-finales {
     padding: 5px
 }
-.jugadores{
+
+.jugadores {
     margin-top: 10px
 }
 

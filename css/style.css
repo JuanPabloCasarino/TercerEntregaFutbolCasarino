@@ -14,37 +14,8 @@
   font-family: universal;
   src: url(../assets/fonts/Universal\ Serif.ttf);
 }
-.body-index {
-  width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgb(17, 182, 242)), to(rgb(183, 222, 237)));
-  background: linear-gradient(to bottom, rgb(17, 182, 242) 0%, rgb(183, 222, 237) 100%);
-}
-
-#main-index {
-  padding: 30px;
-}
-
 #row-1 {
   height: 100%;
-}
-
-.bordes {
-  text-align: center;
-  border-radius: 10px;
-  padding: 10px;
-  margin-top: 10px;
-  margin: 10px;
-}
-
-#tabla {
-  text-align: center;
-  margin-top: 30px;
-  padding: 5px;
-  border: 4px solid #052c3a;
-  border-radius: 10px;
-  color: #9bceb0;
-  background: url(../assets/img/footer.webp) no-repeat center center fixed;
-  background-size: cover;
 }
 
 .medidas {
@@ -56,7 +27,10 @@
   text-align: start;
   font-size: 30px;
   color: black;
-  margin-left: 10px;
+}
+
+#intro {
+  padding: 25px;
 }
 
 #info-copa {
@@ -69,17 +43,29 @@
   margin-bottom: 20px;
 }
 
+.fade {
+  opacity: 0.8;
+  -webkit-transition: opacity 0.5s;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.fade:hover {
+  opacity: 1;
+}
+
 #cartel-medio {
   background: url(../assets/img/blanco-horizontal.jpg) no-repeat center center fixed !important;
   background-size: cover;
-  border-radius: 20px;
   padding: 10px;
   font-family: helvetica;
-  margin-top: 20px;
+  font-size: 28px;
+  margin-top: 40px;
 }
 
 #estadisticas {
-  background: url(../assets/img/blanco-horizontal.jpg) no-repeat center center fixed !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(19, 156, 197, 0.8))), url(../assets/img/blanco-horizontal.jpg);
+  background: linear-gradient(top, rgba(255, 255, 255, 0), rgba(19, 156, 197, 0.8)), url(../assets/img/blanco-horizontal.jpg);
   background-size: cover;
   margin-top: 20px;
 }
@@ -147,13 +133,22 @@
     font-size: 30px;
   }
 }
-.fondo-general, .fotos-historia, footer, .bordes {
+* {
+  font-size: 18px;
+  color: black;
+}
+
+.body-index {
+  width: 100%;
+  background-color: rgb(19, 156, 197);
+}
+
+.fondo-general, .fotos-historia, footer {
   background: url(../assets/img/footer.webp) no-repeat center center fixed;
   background-size: cover;
 }
 
 footer {
-  height: 40vh;
   margin-top: 40px;
 }
 
@@ -161,6 +156,7 @@ header {
   height: 30vh;
   background: url(../assets/img/fondo3.jpg) no-repeat center center fixed;
   background-size: cover;
+  margin-bottom: 30px;
 }
 header nav {
   margin-left: 20px;
@@ -253,11 +249,6 @@ h4 {
     height: 100px;
   }
 }
-.body-partidos {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgb(17, 182, 242)), to(rgb(183, 222, 237)));
-  background: linear-gradient(to bottom, rgb(17, 182, 242) 0%, rgb(183, 222, 237) 100%);
-}
-
 #caption {
   color: #040955;
   font-size: 25px;
@@ -265,14 +256,15 @@ h4 {
   font-weight: bold;
 }
 
-#titulos-tabla {
-  font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif bold;
+.fondo-tablas {
+  background: url(../assets/img/blanco-horizontal.jpg) no-repeat center center fixed !important;
+  background-size: cover;
+  padding: 10px;
 }
 
-#tablas-partidos {
-  font-size: 14px;
-  padding: 20px;
+.fondo-videos {
+  background: url(../assets/img/fondo-blanco.jpg) no-repeat center center fixed !important;
+  background-size: cover;
 }
 
 .bordes-fotos {
@@ -293,10 +285,20 @@ h4 {
   background-color: aqua;
 }
 
+.videos-partidos {
+  width: 500px;
+  height: 260px;
+}
+
 @media screen and (max-width: 1210px) {
   .bordes-fotos {
     width: 460px;
     height: 300px;
+  }
+
+  .videos-partidos {
+    width: 460px;
+    height: 255px;
   }
 }
 @media screen and (max-width: 1050px) {
@@ -309,6 +311,11 @@ h4 {
   .bordes-fotos {
     width: 300px;
     height: 210px;
+  }
+
+  .videos-partidos {
+    width: 340px;
+    height: 200px;
   }
 }
 .fotos-historia {
@@ -332,33 +339,15 @@ h4 {
   text-align: center;
 }
 
-#primer-parrafo {
-  padding: 8px;
-  margin-bottom: 15px;
-  -webkit-box-shadow: 0px 0px 36px 6px rgb(51, 132, 138);
-          box-shadow: 0px 0px 36px 6px rgb(51, 132, 138);
-  border: 2px double dodgerblue;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#segundo-parrafo {
-  padding: 5px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  border: 2px double dodgerblue;
-  -webkit-box-shadow: 0px 0px 36px 6px rgb(51, 132, 138);
-          box-shadow: 0px 0px 36px 6px rgb(51, 132, 138);
-  text-align: center;
+.parrafo {
+  padding: 23px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: black;
+  font-size: 20px;
+  background: url(../assets/img/blanco-horizontal.jpg) no-repeat center center fixed !important;
+  background-size: cover;
+  border-radius: 10px;
 }
 
 #ultima-info {
@@ -366,7 +355,7 @@ h4 {
 }
 
 #titulo-carta {
-  color: rgb(15, 206, 180);
+  color: #040955;
 }
 
 main div div div div div h2 {
@@ -413,17 +402,17 @@ main div div div div div h5 {
 }
 
 .flip-card-front {
-  background-color: #052c3a;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgb(19, 156, 197))), url(../assets/img/blanco-horizontal.jpg);
+  background: linear-gradient(top, rgba(255, 255, 255, 0), rgb(19, 156, 197)), url(../assets/img/blanco-horizontal.jpg);
+  background-size: cover;
   padding: 20px;
 }
 
 .flip-card-back {
-  background-color: #2980b9;
-  color: aliceblue;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
   padding: 20px;
-  font-size: 18px;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 1210px) {
