@@ -14,10 +14,6 @@
   font-family: universal;
   src: url(../assets/fonts/Universal\ Serif.ttf);
 }
-#row-1 {
-  height: 100%;
-}
-
 .medidas {
   width: 350px;
   height: 240px;
@@ -25,22 +21,40 @@
 
 #subtitulo {
   text-align: start;
-  font-size: 30px;
+  font-size: 34px;
   color: black;
 }
 
 #intro {
   padding: 25px;
 }
+#intro p {
+  font-size: 22px;
+}
 
 #info-copa {
   margin-top: 40px;
+}
+#info-copa .accordion-item {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(19, 156, 197, 0.5))), url(../assets/img/fondo-blanco.jpg);
+  background: linear-gradient(top, rgba(255, 255, 255, 0), rgba(19, 156, 197, 0.5)), url(../assets/img/fondo-blanco.jpg);
+  background-size: cover;
+}
+#info-copa .accordion-button {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(19, 156, 197, 0.5))), url(../assets/img/fondo-blanco.jpg);
+  background: linear-gradient(top, rgba(255, 255, 255, 0), rgba(19, 156, 197, 0.5)), url(../assets/img/fondo-blanco.jpg);
+  background-size: cover;
 }
 
 #copa {
   border: 4px solid #052c3a;
   border-radius: 20px;
   margin-bottom: 20px;
+}
+
+.carrousel {
+  width: 1700px;
+  height: 750px;
 }
 
 .fade {
@@ -58,9 +72,11 @@
   background: url(../assets/img/blanco-horizontal.jpg) no-repeat center center fixed !important;
   background-size: cover;
   padding: 10px;
-  font-family: helvetica;
-  font-size: 28px;
   margin-top: 40px;
+}
+#cartel-medio div p {
+  font-family: helvetica;
+  font-size: 22px;
 }
 
 #estadisticas {
@@ -102,17 +118,41 @@
     width: 250px;
     height: 200px;
   }
+
+  .carrousel {
+    width: 1400px;
+    height: 650px;
+  }
 }
 @media screen and (max-width: 1200px) {
   .medidas {
     width: 200px;
     height: 150px;
   }
+
+  .carrousel {
+    width: 1200px;
+    height: 550px;
+  }
+
+  #info-copa {
+    margin-top: 0px;
+    padding: 0px;
+  }
 }
 @media screen and (max-width: 990px) {
   .medidas {
     width: 300px;
     height: 220px;
+  }
+
+  .carrousel {
+    width: 1000px;
+    height: 480px;
+  }
+
+  #intro p {
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -123,6 +163,11 @@
   #subtitulo {
     font-size: 20px;
   }
+
+  .carrousel {
+    width: 750px;
+    height: 350px;
+  }
 }
 @media screen and (max-width: 480px) {
   #copa {
@@ -131,6 +176,11 @@
 
   h1, h2 {
     font-size: 30px;
+  }
+
+  .carrousel {
+    width: 500px;
+    height: 280px;
   }
 }
 * {
@@ -241,6 +291,26 @@ h4 {
   #logo {
     width: 120px;
     height: 120px;
+  }
+
+  .d-md-flex {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 @media screen and (max-width: 480px) {
@@ -372,7 +442,6 @@ main div div div div div h5 {
   -webkit-perspective: 1000px;
           perspective: 1000px;
   margin-bottom: 20px;
-  margin-top: 20px;
 }
 
 .flip-card-inner {
@@ -384,8 +453,6 @@ main div div div div div h5 {
   transition: transform 0.6s, -webkit-transform 0.6s;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .flip-card:hover .flip-card-inner {
@@ -405,7 +472,6 @@ main div div div div div h5 {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgb(19, 156, 197))), url(../assets/img/blanco-horizontal.jpg);
   background: linear-gradient(top, rgba(255, 255, 255, 0), rgb(19, 156, 197)), url(../assets/img/blanco-horizontal.jpg);
   background-size: cover;
-  padding: 20px;
 }
 
 .flip-card-back {
@@ -447,6 +513,11 @@ main div div div div div h5 {
     width: 420px;
     height: 280px;
   }
+
+  .flip-card {
+    width: 450px;
+    height: 480px;
+  }
 }
 @media screen and (max-width: 510px) {
   #texto-marcado {
@@ -466,21 +537,39 @@ main div div div div div h5 {
     width: 350px;
     height: 230px;
   }
+
+  .flip-card {
+    width: 340px;
+    height: 340px;
+  }
+
+  .flip-card {
+    width: 380px;
+    height: 530px;
+  }
 }
 .fotos-tienda {
-  border: 2px double dodgerblue;
-  -webkit-box-shadow: 0px 0px 36px 6px rgb(51, 132, 138);
-          box-shadow: 0px 0px 36px 6px rgb(51, 132, 138);
-  margin-top: 20px;
-  width: 500px;
-  height: 320px;
+  width: 400px;
+  height: 420px;
+  padding: 30px;
 }
 
-.cuestionario div {
-  padding: 5px;
-  margin-right: 10px;
+.tienda {
+  background: url(../assets/img/fondo-blanco.jpg) no-repeat center center fixed !important;
+  background-size: cover;
 }
 
+@media screen and (max-width: 1200px) {
+  main div div {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .fotos-tienda {
+    width: 300px;
+    height: 320px;
+  }
+}
 #formulario {
   font-size: 20px;
   font-weight: bold;

@@ -1,15 +1,32 @@
-.fotos-tienda{
-    border: $bordes-celestes;
-    box-shadow: $sombra-celeste;
-    margin-top: 20px;
-    width: 500px;
-    height: 320px;
+.fotos-tienda {
+    width: 400px;
+    height: 420px;
+    padding: 30px;
 
 }
-.cuestionario{
-    div{    
-        padding: 5px;
-        margin-right: 10px;
+
+.tienda {
+    background: url(../assets/img/fondo-blanco.jpg) no-repeat center center fixed !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+        div {
+            div {
+                padding: 10px;
+            }
+        }
+    }
+
+}
+@media screen and (max-width: 768px) {
+    .fotos-tienda {
+        width: 300px;
+        height: 320px;
     }
 
 }

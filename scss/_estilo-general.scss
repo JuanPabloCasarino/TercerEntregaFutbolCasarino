@@ -125,6 +125,14 @@ h4 {
         width: 120px;
         height: 120px;
     }
+    .d-md-flex {
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 480px) {
